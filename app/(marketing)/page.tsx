@@ -21,7 +21,7 @@ export default function Home() {
         <h1 className="max-w-[480px] text-center text-xl font-bold text-neutral-600 lg:text-3xl">
           Aprenda, pratique e domine novos idiomas com o Lingo.
         </h1>
-        <div>
+        <div className="flex w-full max-w-[330px] flex-col items-center gap-y-4">
           <ClerkLoading>
             <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
           </ClerkLoading>
@@ -29,7 +29,7 @@ export default function Home() {
             <SignedOut>
               <SignUpButton mode="modal" fallbackRedirectUrl="/learn">
                 <Button size={"lg"} variant={"secondary"} className="w-full">
-                  Get Started
+                  Começar
                 </Button>
               </SignUpButton>
 
@@ -39,7 +39,7 @@ export default function Home() {
                   variant={"primaryOutline"}
                   className="w-full"
                 >
-                  I Already have an account
+                  Já tenho uma conta
                 </Button>
               </SignInButton>
             </SignedOut>
@@ -51,7 +51,7 @@ export default function Home() {
                 className="w-full"
                 asChild
               >
-                <Link href={"/learn"}>Get Started</Link>
+                <Link href={"/learn"}>Continuar aprendendo</Link>
               </Button>
             </SignedIn>
           </ClerkLoaded>
