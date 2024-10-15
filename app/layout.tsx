@@ -4,6 +4,8 @@ import { Nunito } from "next/font/google"
 import { ClerkProvider } from "@clerk/nextjs"
 import { ptBR } from "@clerk/localizations"
 
+import { Toaster } from "@/components/ui/sonner"
+
 import "./globals.css"
 
 const font = Nunito({
@@ -23,7 +25,10 @@ export default function RootLayout({
   return (
     <ClerkProvider localization={ptBR}>
       <html lang="pt-BR">
-        <body className={`${font.className} antialiased`}>{children}</body>
+        <body className={`${font.className} antialiased`}>
+          <Toaster />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   )
